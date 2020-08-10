@@ -15,4 +15,14 @@ public class User {
         this.userID = newUserId;
         newUserId++;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userID=" + userID +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", currentlyRentedBike=" + currentlyRentedBike +
+                '}';
+    }
 }

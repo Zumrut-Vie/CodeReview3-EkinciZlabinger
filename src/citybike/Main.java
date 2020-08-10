@@ -1,5 +1,6 @@
 package citybike;
 
+import java.time.LocalDate;
 import java.util.HashMap;
 
 public class Main {
@@ -96,6 +97,18 @@ public class Main {
 
         System.out.println("station2 bikes after return: " + station2.bikes);
         System.out.println("Current bike of user4: "+ user4.currentlyRentedBike);
+
+        System.out.println();
+
+        //Additional Points
+        System.out.println("Date of Rent");
+        LocalDate rentStart = LocalDate.parse("2020-02-13");
+        LocalDate rentEnd = LocalDate.of(2020, 2, 14);
+        station3.addBike(bike9);
+        user3.currentlyRentedBike = bike9;
+        Rent rent1 = new Rent(rentStart,rentEnd, user3);
+        System.out.println(rent1);
+
 
     }
 
